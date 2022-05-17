@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/userFragment">
+
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.q4_hw18_1.ui.user.UserFragment"
+        android:label="UserFragment" >
+        <action
+            android:id="@+id/action_userFragment_to_showUserFragment"
+            app:destination="@id/showUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showUserFragment"
+        android:name="com.example.q4_hw18_1.ui.showuser.ShowUserFragment"
+        android:label="ShowUserFragment" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/saveFragment"
+        android:name="com.example.q4_hw18_1.ui.save.SaveFragment"
+        android:label="SaveFragment" />
+    <dialog
+        android:id="@+id/addUserDialog"
+        android:name="com.example.q4_hw18_1.ui.user.AddUserDialog"
+        android:label="AddUserDialog" />
+    <dialog
+        android:id="@+id/editDialog"
+        android:name="com.example.q4_hw18_1.ui.user.EditDialog"
+        android:label="EditDialog" />
+</navigation>
